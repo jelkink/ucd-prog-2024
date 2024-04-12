@@ -1,5 +1,6 @@
 from party import Party
 from voter import Voter
+from log import Log
 
 
 class Simulation:
@@ -8,6 +9,7 @@ class Simulation:
     self.parties = []
     self.voters = []
     self.time = 0
+    self.log = Log("simulation_log.txt")
 
   def run(self, iterations):
     end = self.time + iterations
@@ -33,8 +35,12 @@ class Simulation:
       self.parties.append(Party("Party %d" % (i)))
       i += 1
 
+    self.log.write("Created %d parties" % n)
+
   def create_voters(self, n):
     i = 0
     while i < n:
       self.voters.append(Voter())
       i += 1
+
+    self.log.write("Created %d voters" % n)
