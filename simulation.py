@@ -16,6 +16,7 @@ class Simulation:
     while self.time < end:
       self.election()
       self.report_vote_count()
+      self.update_parties()
       self.time += 1
 
   def election(self):
@@ -24,6 +25,13 @@ class Simulation:
       
     for voter in self.voters:
       voter.vote(self.parties)
+
+  def update_parties(self):
+    for party in self.parties:
+      party.strategy.determine_update(self)
+
+    for party in self.parties:
+      party.strategy.execute_update()
 
   def report_vote_count(self):
     for party in self.parties:

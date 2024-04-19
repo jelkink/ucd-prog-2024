@@ -1,7 +1,7 @@
 class Strategy:
 
   def __init__(self, party):
-    print("This class should not be initialized directly!")
+
     self.name = ""
     self.party = party
 
