@@ -15,6 +15,7 @@ class Party:
     self.voters = []
     self.name = name
     self.previous_vote_count = 0
+    self.strategy = Sticker(self)
 
   def add_voter(self, voter):
     self.voters.append(voter)
