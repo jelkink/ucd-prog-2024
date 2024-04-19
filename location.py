@@ -14,7 +14,7 @@ class Location:
   def move_towards(self, x, y):
     pass
 
-  def move_in_direction(self, radius):
+  def move_in_direction(self, angle):
     pass
 
   def distance(self, other):
