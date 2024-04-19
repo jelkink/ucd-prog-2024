@@ -11,6 +11,12 @@ class Location:
     self.x = x
     self.y = y
 
+  def move_towards(self, x, y):
+    pass
+
+  def move_in_direction(self, radius):
+    pass
+
   def distance(self, other):
     return math.sqrt((other.x - self.x)**2 + (other.y - self.y)**2)
 
