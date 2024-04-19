@@ -27,7 +27,7 @@ class Simulation:
 
   def report_vote_count(self):
     for party in self.parties:
-      print("Count of votes for %10s at time %03d: %d" % (party.name, self.time, party.count_votes()))
+      print("Count of votes for %10s (%1s) at time %03d: %d" % (party.name, party.strategy.name, self.time, party.count_votes()))
 
   def create_parties(self, n):
     i = 0
